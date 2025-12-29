@@ -1,0 +1,29 @@
+#TRAINEE
+Imie: Jan
+Nazwisko: Kowalski
+Wiek: 25
+Plec: Male
+Dziedzina: ComputerScience
+PunktyStazowe: 80.5
+
+#JUNIOR
+Imie: Anna
+Nazwisko: Nowak
+Wiek: 31
+Plec: Female
+Dziedzina: Chemistry
+PunktyMinisterialne: 50
+Publikacje:
+Tytul: Chemia1|Cytowania: 15
+Tytul: Chemia2|Cytowania: 5
+
+#SENIOR
+Imie: Adam
+Nazwisko: Wojcik
+Wiek: 48
+Plec: Male
+Dziedzina: Physics
+PunktyMinisterialne: 70
+LataDoswiadczenia: 20
+Publikacje:
+Tytul: Fizyka1|Cytowania: 30

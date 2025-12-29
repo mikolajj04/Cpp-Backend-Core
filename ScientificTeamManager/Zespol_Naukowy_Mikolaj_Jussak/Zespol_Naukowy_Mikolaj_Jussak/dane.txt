@@ -1,0 +1,142 @@
+#TRAINEE
+Imie: Anna
+Nazwisko: Kowalska
+Wiek: 23
+Plec: Female
+Dziedzina: Biology
+PunktyStazowe: 0.5
+
+#TRAINEE
+Imie: Jakub
+Nazwisko: Nowak
+Wiek: 25
+Plec: Male
+Dziedzina: Physics
+PunktyStazowe: 0
+
+#TRAINEE
+Imie: Natalia
+Nazwisko: Maj
+Wiek: 22
+Plec: Female
+Dziedzina: Chemistry
+PunktyStazowe: 0.3
+
+#JUNIOR
+Imie: Marek
+Nazwisko: Zawadzki
+Wiek: 30
+Plec: Male
+Dziedzina: ComputerScience
+PunktyMinisterialne: 0
+Publikacje:
+Tytul: Sieci neuronowe i uczenie glebokie|Cytowania: 120
+Tytul: Optymalizacja algorytmiczna|Cytowania: 90
+
+#JUNIOR
+Imie: Paulina
+Nazwisko: Kaczmarek
+Wiek: 29
+Plec: Female
+Dziedzina: Mathematics
+PunktyMinisterialne: 0
+Publikacje:
+Tytul: Algebra abstrakcyjna|Cytowania: 80
+
+#JUNIOR
+Imie: Tomek
+Nazwisko: Lis
+Wiek: 31
+Plec: Male
+Dziedzina: Medicine
+PunktyMinisterialne: 0
+Publikacje:
+Tytul: Nowe metody leczenia raka|Cytowania: 150
+
+#JUNIOR
+Imie: Zofia
+Nazwisko: Krol
+Wiek: 28
+Plec: Female
+Dziedzina: Neuroscience
+PunktyMinisterialne: 0
+Publikacje:
+Tytul: Plastycznosc mozgu|Cytowania: 95
+
+#JUNIOR
+Imie: Damian
+Nazwisko: Malec
+Wiek: 32
+Plec: Male
+Dziedzina: Psychology
+PunktyMinisterialne: 0
+Publikacje:
+Tytul: Motywacja wewnetrzna|Cytowania: 70
+
+#SENIOR
+Imie: Barbara
+Nazwisko: Duda
+Wiek: 45
+Plec: Female
+Dziedzina: Robotics
+PunktyMinisterialne: 0
+LataDoswiadczenia: 0
+Publikacje:
+Tytul: Roboty w medycynie|Cytowania: 200
+Tytul: Automatyzacja procesow|Cytowania: 160
+
+#SENIOR
+Imie: Krzysztof
+Nazwisko: Pawlak
+Wiek: 50
+Plec: Male
+Dziedzina: Astronomy
+PunktyMinisterialne: 0
+LataDoswiadczenia: 0
+Publikacje:
+Tytul: Odkrycia planet pozaslonecznych|Cytowania: 300
+
+#SENIOR
+Imie: Sylwia
+Nazwisko: Borkowska
+Wiek: 48
+Plec: Female
+Dziedzina: ComputerScience
+PunktyMinisterialne: 0
+LataDoswiadczenia: 0
+Publikacje:
+Tytul: Rownosc spoleczna|Cytowania: 110
+Tytul: Struktury spoleczne|Cytowania: 90
+
+#SENIOR
+Imie: Adrian
+Nazwisko: Jastrzêbski
+Wiek: 46
+Plec: Male
+Dziedzina: Economics
+PunktyMinisterialne: 0
+LataDoswiadczenia: 0
+Publikacje:
+Tytul: Globalizacja a rynki|Cytowania: 140
+
+#SENIOR
+Imie: Monika
+Nazwisko: Gorska
+Wiek: 44
+Plec: Female
+Dziedzina: Anthropology
+PunktyMinisterialne: 0
+LataDoswiadczenia: 0
+Publikacje:
+Tytul: Ewolucja czlowieka|Cytowania: 95
+
+#JUNIOR
+Imie: Robert
+Nazwisko: Lewicki
+Wiek: 33
+Plec: Male
+Dziedzina: Geology
+PunktyMinisterialne: 0
+Publikacje:
+Tytul: Procesy geologiczne|Cytowania: 70
+
