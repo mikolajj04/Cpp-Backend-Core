@@ -1,0 +1,134 @@
+\doxysection{projekt/\+Huffman\+V1/\+Huffman\+V1/huffman.h File Reference}
+\hypertarget{huffman_8h}{}\label{huffman_8h}\index{projekt/HuffmanV1/HuffmanV1/huffman.h@{projekt/HuffmanV1/HuffmanV1/huffman.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Struktura wezla drzewa Huffmanna. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_compare}{Compare}}
+\begin{DoxyCompactList}\small\item\em Porownanie wezlow dla kolejki priorytetowej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{huffman_8h_af781a1df622c2044963b23321e83bccd}{encode\+File}} (const string \&input\+File, const string \&output\+File)
+\begin{DoxyCompactList}\small\item\em Koduje zawartosc pliku wejsciowego przy uzyciu drzewa Huffmanna. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{huffman_8h_a1f25bda4b7ee84ab922efe0ae5f9dc2b}{decode\+File}} (const string \&input\+File, const string \&output\+File)
+\begin{DoxyCompactList}\small\item\em Dekoduje zawartosc zakodowanego pliku przy uzyciu drzewa Huffmanna. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{huffman_8h_a74c342a8df6e07ea4169e1426b2e4d6e}{build\+Code\+Table}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}root, const string \&str, unordered\+\_\+map$<$ char, string $>$ \&huffman\+Code)
+\begin{DoxyCompactList}\small\item\em Buduje tabele kodow Huffmanna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{huffman_8h_a74c342a8df6e07ea4169e1426b2e4d6e}\index{huffman.h@{huffman.h}!buildCodeTable@{buildCodeTable}}
+\index{buildCodeTable@{buildCodeTable}!huffman.h@{huffman.h}}
+\doxysubsubsection{\texorpdfstring{buildCodeTable()}{buildCodeTable()}}
+{\footnotesize\ttfamily \label{huffman_8h_a74c342a8df6e07ea4169e1426b2e4d6e} 
+void build\+Code\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{, }\item[{const string \&}]{str}{, }\item[{unordered\+\_\+map$<$ char, string $>$ \&}]{huffman\+Code}{}\end{DoxyParamCaption})}
+
+
+
+Buduje tabele kodow Huffmanna. 
+
+Funkcja rekurencyjnie przechodzi drzewo Huffmanna i przypisuje kazdemu symbolowi odpowiedni kod (ciag znakow) na podstawie jego pozycji w drzewie.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Wskaznik na korzen drzewa Huffmanna. \\
+\hline
+{\em str} & Aktualny ciag kodu (sciezka do danego wezla) w drzewie. \\
+\hline
+{\em huffman\+Code} & Referencja do mapy, w ktorej zapisywane sa kody Huffmanna.\\
+\hline
+\end{DoxyParams}
+Buduje tabele kodow Huffmanna.
+
+Funkcja rekurencyjnie przechodzi przez drzewo Huffmana i przypisuje kazdemu lisciowi (symbolowi) odpowiedni kod binarny. Do lewego poddrzewa dodawane jest "{}0"{}, a do prawego "{}1"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Wskaznik do biezacego wezla drzewa Huffmana. \\
+\hline
+{\em str} & Aktualnie zbudowany kod binarny. \\
+\hline
+{\em huffman\+Code} & Mapa, ktora przechowuje ostateczne kody Huffmana dla kazdego symbolu. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{huffman_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{huffman_8cpp_source}{huffman.\+cpp}}.
+
+\Hypertarget{huffman_8h_a1f25bda4b7ee84ab922efe0ae5f9dc2b}\index{huffman.h@{huffman.h}!decodeFile@{decodeFile}}
+\index{decodeFile@{decodeFile}!huffman.h@{huffman.h}}
+\doxysubsubsection{\texorpdfstring{decodeFile()}{decodeFile()}}
+{\footnotesize\ttfamily \label{huffman_8h_a1f25bda4b7ee84ab922efe0ae5f9dc2b} 
+void decode\+File (\begin{DoxyParamCaption}\item[{const string \&}]{input\+File}{, }\item[{const string \&}]{output\+File}{}\end{DoxyParamCaption})}
+
+
+
+Dekoduje zawartosc zakodowanego pliku przy uzyciu drzewa Huffmanna. 
+
+Funkcja odtwarza oryginalna zawartosc pliku, ktory zostal zakodowany metoda Huffmanna.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Sciezka do pliku wejsciowego z zakodowanymi danymi. \\
+\hline
+{\em output\+File} & Sciezka do pliku, do ktorego zostanie zapisana zdekompresowana zawartosc.\\
+\hline
+\end{DoxyParams}
+Dekoduje zawartosc zakodowanego pliku przy uzyciu drzewa Huffmanna.
+
+Funkcja odczytuje z pliku zakodowany tekst oraz tablice kodow (w postaci klucz\+: kod binarny, wartosc\+: symbol), odwraca mapowanie, a nastepnie dekoduje tekst przy uzyciu odwroconej tablicy kodow. Zdekodowany tekst jest zapisywany do pliku wyjsciowego.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Nazwa pliku wejsciowego z zakodowanym tekstem. \\
+\hline
+{\em output\+File} & Nazwa pliku wyjsciowego, do ktorego zapisany zostanie zdekodowany tekst. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{huffman_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{huffman_8cpp_source}{huffman.\+cpp}}.
+
+\Hypertarget{huffman_8h_af781a1df622c2044963b23321e83bccd}\index{huffman.h@{huffman.h}!encodeFile@{encodeFile}}
+\index{encodeFile@{encodeFile}!huffman.h@{huffman.h}}
+\doxysubsubsection{\texorpdfstring{encodeFile()}{encodeFile()}}
+{\footnotesize\ttfamily \label{huffman_8h_af781a1df622c2044963b23321e83bccd} 
+void encode\+File (\begin{DoxyParamCaption}\item[{const string \&}]{input\+File}{, }\item[{const string \&}]{output\+File}{}\end{DoxyParamCaption})}
+
+
+
+Koduje zawartosc pliku wejsciowego przy uzyciu drzewa Huffmanna. 
+
+Funkcja przetwarza plik wejsciowy, koduje jego zawartosc metoda Huffmanna i zapisuje wynik do pliku wyjsciowego.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Sciezka do pliku wejsciowego. \\
+\hline
+{\em output\+File} & Sciezka do pliku wyjsciowego.\\
+\hline
+\end{DoxyParams}
+Koduje zawartosc pliku wejsciowego przy uzyciu drzewa Huffmanna.
+
+Funkcja odczytuje zawartosc pliku wejsciowego, liczy czestotliwosc wystepowania kazdego znaku, buduje drzewo Huffmana, generuje kody dla znakow, a nastepnie koduje tekst. Zakodowany tekst oraz tablica kodow sa zapisywane do pliku wyjsciowego.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Nazwa pliku wejsciowego (sciezka do pliku). \\
+\hline
+{\em output\+File} & Nazwa pliku wyjsciowego (sciezka do pliku). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{huffman_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{huffman_8cpp_source}{huffman.\+cpp}}.
+

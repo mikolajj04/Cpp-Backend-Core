@@ -39,3 +39,13 @@
 
 # debug information files
 *.dwo
+
+.vs/
+x64/
+Debug/
+Release/
+*.log
+*.tlog
+*.recipe
+*.pdb
+*.idb

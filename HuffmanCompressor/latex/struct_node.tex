@@ -1,0 +1,110 @@
+\doxysection{Node Struct Reference}
+\hypertarget{struct_node}{}\label{struct_node}\index{Node@{Node}}
+
+
+Struktura wezla drzewa Huffmanna.  
+
+
+
+
+{\ttfamily \#include $<$huffman.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node_ac039b33370a180ebe215c0bd1a6746c4}{Node}} (char sym, int freq)
+\begin{DoxyCompactList}\small\item\em Konstruktor wezla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{struct_node_a92796ea8dd71d6bb29e0e6f5c099cd5a}{symbol}}
+\item 
+int \mbox{\hyperlink{struct_node_a5ad4dab14371a6f4b7b54bf460d8b5bc}{frequency}}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struktura wezla drzewa Huffmanna. 
+
+Ta struktura reprezentuje wezel uzywany w drzewie Huffmanna, gdzie przechowywany jest symbol oraz czestotliwosc wystepowania tego symbolu. Posiada rowniez wskazniki do lewej i prawej galezi drzewa. 
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00021}{21}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_node_ac039b33370a180ebe215c0bd1a6746c4}\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily \label{struct_node_ac039b33370a180ebe215c0bd1a6746c4} 
+Node\+::\+Node (\begin{DoxyParamCaption}\item[{char}]{sym}{, }\item[{int}]{freq}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor wezla. 
+
+Inicjalizuje wezel drzewa Huffmanna dla podanego symbolu i czestotliwosci. Wskazniki do lewego oraz prawego dziecka sa ustawione na nullptr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sym} & Symbol, ktory reprezentuje dany wezel. \\
+\hline
+{\em freq} & Czestotliwosc wystepowania symbolu. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00036}{36}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_node_a5ad4dab14371a6f4b7b54bf460d8b5bc}\index{Node@{Node}!frequency@{frequency}}
+\index{frequency@{frequency}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily \label{struct_node_a5ad4dab14371a6f4b7b54bf460d8b5bc} 
+int Node\+::frequency}
+
+Czestotliwosc wystepowania symbolu. 
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00023}{23}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+\Hypertarget{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}\index{Node@{Node}!left@{left}}
+\index{left@{left}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \label{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee} 
+\mbox{\hyperlink{struct_node}{Node}}\texorpdfstring{$\ast$}{*} Node\+::left}
+
+Wskaznik na lewe dziecko w drzewie Huffmanna. 
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00024}{24}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+\Hypertarget{struct_node_a7328862eaa6dea28018326549b3294d3}\index{Node@{Node}!right@{right}}
+\index{right@{right}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \label{struct_node_a7328862eaa6dea28018326549b3294d3} 
+\mbox{\hyperlink{struct_node}{Node}}\texorpdfstring{$\ast$}{*} Node\+::right}
+
+Wskaznik na prawe dziecko w drzewie Huffmanna. 
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00025}{25}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+\Hypertarget{struct_node_a92796ea8dd71d6bb29e0e6f5c099cd5a}\index{Node@{Node}!symbol@{symbol}}
+\index{symbol@{symbol}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily \label{struct_node_a92796ea8dd71d6bb29e0e6f5c099cd5a} 
+char Node\+::symbol}
+
+Symbol reprezentowany przez wezel. 
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00022}{22}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+projekt/\+Huffman\+V1/\+Huffman\+V1/\mbox{\hyperlink{huffman_8h}{huffman.\+h}}\end{DoxyCompactItemize}

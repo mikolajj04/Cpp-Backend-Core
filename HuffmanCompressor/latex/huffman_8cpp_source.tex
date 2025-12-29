@@ -1,0 +1,136 @@
+\doxysection{huffman.\+cpp}
+\hypertarget{huffman_8cpp_source}{}\label{huffman_8cpp_source}\index{projekt/HuffmanV1/HuffmanV1/huffman.cpp@{projekt/HuffmanV1/HuffmanV1/huffman.cpp}}
+\mbox{\hyperlink{huffman_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{huffman_8h}{huffman.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00013}\mbox{\hyperlink{huffman_8cpp_a74c342a8df6e07ea4169e1426b2e4d6e}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{huffman_8cpp_a74c342a8df6e07ea4169e1426b2e4d6e}{buildCodeTable}}(\mbox{\hyperlink{struct_node}{Node}}*\ root,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ str,\ unordered\_map<char,\ string>\&\ huffmanCode)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (!root)}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ Jezeli\ wezel\ jest\ lisciem\ (brak\ lewego\ i\ prawego\ potomka),\ przypisz\ kod\ do\ symbolu.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (!root-\/>\mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}\ \&\&\ !root-\/>\mbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}})\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ huffmanCode[root-\/>\mbox{\hyperlink{struct_node_a92796ea8dd71d6bb29e0e6f5c099cd5a}{symbol}}]\ =\ str;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Rekurencyjne\ przejscie\ do\ lewego\ poddrzewa\ z\ dodaniem\ "{}0"{}\ do\ kodu.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{huffman_8cpp_a74c342a8df6e07ea4169e1426b2e4d6e}{buildCodeTable}}(root-\/>\mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}},\ str\ +\ \textcolor{stringliteral}{"{}0"{}},\ huffmanCode);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Rekurencyjne\ przejscie\ do\ prawego\ poddrzewa\ z\ dodaniem\ "{}1"{}\ do\ kodu.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{huffman_8cpp_a74c342a8df6e07ea4169e1426b2e4d6e}{buildCodeTable}}(root-\/>\mbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}},\ str\ +\ \textcolor{stringliteral}{"{}1"{}},\ huffmanCode);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00036}\mbox{\hyperlink{huffman_8cpp_af781a1df622c2044963b23321e83bccd}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{huffman_8cpp_af781a1df622c2044963b23321e83bccd}{encodeFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ inputFile,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ outputFile)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Otwieranie\ pliku\ wejsciowego\ w\ trybie\ binarnym.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00038}00038\ \ \ \ \ ifstream\ input(inputFile,\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (!input.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nie\ mozna\ otworzyc\ pliku\ wejsciowego!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Zliczanie\ czestotliwosci\ wystepowania\ znakow.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00045}00045\ \ \ \ \ unordered\_map<char,\ int>\ frequency;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00046}00046\ \ \ \ \ stringstream\ buffer;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00047}00047\ \ \ \ \ buffer\ <<\ input.rdbuf();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{string}\ text\ =\ buffer.str();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00049}00049\ \ \ \ \ input.close();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Przeliczanie\ wystapienia\ kazdego\ znaku\ w\ tekscie.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ ch\ :\ text)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ frequency[ch]++;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ kolejki\ priorytetowej\ do\ budowy\ drzewa\ Huffmana.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00057}00057\ \ \ \ \ priority\_queue<Node*,\ vector<Node*>,\ \mbox{\hyperlink{struct_compare}{Compare}}>\ pq;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ pair\ :\ frequency)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ pq.push(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_node}{Node}}(pair.first,\ pair.second));}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ Budowa\ drzewa\ Huffmana.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{while}\ (pq.size()\ >\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_node}{Node}}*\ left\ =\ pq.top();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ pq.pop();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_node}{Node}}*\ right\ =\ pq.top();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ pq.pop();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ nowego\ wezla\ sumujacego\ czestotliwosci.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_node}{Node}}*\ sum\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_node}{Node}}(\textcolor{charliteral}{'\(\backslash\)0'},\ left-\/>\mbox{\hyperlink{struct_node_a5ad4dab14371a6f4b7b54bf460d8b5bc}{frequency}}\ +\ right-\/>\mbox{\hyperlink{struct_node_a5ad4dab14371a6f4b7b54bf460d8b5bc}{frequency}});}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ sum-\/>\mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}\ =\ left;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ sum-\/>\mbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}}\ =\ right;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ pq.push(sum);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{struct_node}{Node}}*\ root\ =\ pq.top();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Generowanie\ tablicy\ kodow\ Huffmana.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00077}00077\ \ \ \ \ unordered\_map<char,\ string>\ huffmanCode;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{huffman_8cpp_a74c342a8df6e07ea4169e1426b2e4d6e}{buildCodeTable}}(root,\ \textcolor{stringliteral}{"{}"{}},\ huffmanCode);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ Kodowanie\ tekstu\ przy\ pomocy\ wygenerowanych\ kodow.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{string}\ encodedText;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ ch\ :\ text)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ encodedText\ +=\ huffmanCode[ch];}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ Zapisanie\ tablicy\ kodow\ i\ zakodowanego\ tekstu\ do\ pliku\ wyjsciowego.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00087}00087\ \ \ \ \ ofstream\ output(outputFile,\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{if}\ (!output.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nie\ mozna\ otworzyc\ pliku\ wyjsciowego!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ Zapis\ rozmiaru\ tablicy\ kodow.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00093}00093\ \ \ \ \ output\ <<\ huffmanCode.size()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Zapis\ par:\ symbol:kod.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ pair\ :\ huffmanCode)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ output\ <<\ pair.first\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ pair.second\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Zapis\ zakodowanego\ tekstu.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00099}00099\ \ \ \ \ output\ <<\ encodedText;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00100}00100\ \ \ \ \ output.close();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00113}\mbox{\hyperlink{huffman_8cpp_a1f25bda4b7ee84ab922efe0ae5f9dc2b}{00113}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{huffman_8cpp_a1f25bda4b7ee84ab922efe0ae5f9dc2b}{decodeFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ inputFile,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ outputFile)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Otwieranie\ pliku\ wejsciowego\ w\ trybie\ binarnym.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00115}00115\ \ \ \ \ ifstream\ input(inputFile,\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{if}\ (!input.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nie\ mozna\ otworzyc\ pliku\ wejsciowego!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//\ Odczyt\ tablicy\ kodow\ zapisanej\ w\ pliku.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00122}00122\ \ \ \ \ unordered\_map<string,\ char>\ reverseHuffmanCode;\ \textcolor{comment}{//\ Klucz:\ kod\ binarny,\ Wartosc:\ symbol.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{int}\ tableSize;\ \textcolor{comment}{//\ Liczba\ roznych\ elementow\ (symboli)\ zapisanych\ w\ tablicy.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00124}00124\ \ \ \ \ input\ >>\ tableSize;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00125}00125\ \ \ \ \ input.ignore();\ \textcolor{comment}{//\ Ignorowanie\ znaku\ nowej\ linii.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tableSize;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ symbol;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ code;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ input.get(symbol);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ input.ignore(1);\ \textcolor{comment}{//\ Pomijanie\ dwukropka\ ':'.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ getline(input,\ code);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ reverseHuffmanCode[code]\ =\ symbol;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//\ Odczyt\ zakodowanego\ tekstu\ z\ pliku.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{keywordtype}{string}\ encodedText;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00138}00138\ \ \ \ \ getline(input,\ encodedText,\ \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00139}00139\ \ \ \ \ input.close();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{comment}{//\ Dekodowanie\ tekstu\ przy\ uzyciu\ odwroconej\ tablicy\ kodow.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00142}00142\ \ \ \ \ \textcolor{keywordtype}{string}\ decodedText;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordtype}{string}\ currentCode;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00144}00144\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ bit\ :\ encodedText)\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ currentCode\ +=\ bit;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reverseHuffmanCode.count(currentCode))\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ decodedText\ +=\ reverseHuffmanCode[currentCode];}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ currentCode\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00152}00152\ \ \ \ \ \textcolor{comment}{//\ Zapis\ zdekodowanego\ tekstu\ do\ pliku\ wyjsciowego.}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00153}00153\ \ \ \ \ ofstream\ output(outputFile,\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (!output.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nie\ mozna\ otworzyc\ pliku\ wyjsciowego!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00157}00157\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00158}00158\ \ \ \ \ output\ <<\ decodedText;}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00159}00159\ \ \ \ \ output.close();}
+\DoxyCodeLine{\Hypertarget{huffman_8cpp_source_l00160}00160\ \}}
+
+\end{DoxyCode}

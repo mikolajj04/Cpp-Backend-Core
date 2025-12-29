@@ -1,0 +1,59 @@
+\doxysection{Compare Struct Reference}
+\hypertarget{struct_compare}{}\label{struct_compare}\index{Compare@{Compare}}
+
+
+Porownanie wezlow dla kolejki priorytetowej.  
+
+
+
+
+{\ttfamily \#include $<$huffman.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_compare_ac9b665eefee9ecb59a7a6f811aefbd88}{operator()}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Operator porownania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Porownanie wezlow dla kolejki priorytetowej. 
+
+Struktura sluzy do porownywania dwoch wezlow drzewa Huffmanna na podstawie ich czestotliwosci. Jest uzywana przy implementacji kolejki priorytetowej. 
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00045}{45}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_compare_ac9b665eefee9ecb59a7a6f811aefbd88}\index{Compare@{Compare}!operator()@{operator()}}
+\index{operator()@{operator()}!Compare@{Compare}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{struct_compare_ac9b665eefee9ecb59a7a6f811aefbd88} 
+bool Compare\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator porownania. 
+
+Porownuje dwa wezly drzewa Huffmanna.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Wskaznik na pierwszy wezel. \\
+\hline
+{\em b} & Wskaznik na drugi wezel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jesli czestotliwosc wezla a jest wieksza niz czestotliwosc wezla b, w przeciwnym razie false. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{huffman_8h_source_l00055}{55}} of file \mbox{\hyperlink{huffman_8h_source}{huffman.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+projekt/\+Huffman\+V1/\+Huffman\+V1/\mbox{\hyperlink{huffman_8h}{huffman.\+h}}\end{DoxyCompactItemize}
