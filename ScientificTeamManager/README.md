@@ -28,7 +28,7 @@ The application features a structured CLI menu for intuitive navigation:
 * **A/D:** Add or Delete entries.
 * **$:** Access the Salary Calculator documentation.
 * **Q:** Save database and exit.
-* ![ScientificHub GUI Preview](./Zespol_Naukowy_Mikolaj_Jussak/GUI_presentation.png)
+ ![ScientificHub GUI Preview](./GUI_presentation.png)
 
 ### 📄 Documentation
 Project includes comprehensive technical documentation generated via Doxygen.
