@@ -28,6 +28,8 @@ The application features a structured CLI menu for intuitive navigation:
 * **A/D:** Add or Delete entries.
 * **$:** Access the Salary Calculator documentation.
 * **Q:** Save database and exit.
+
+  
  ![ScientificHub GUI Preview](./GUI_presentation.png)
 
 ### 📄 Documentation
