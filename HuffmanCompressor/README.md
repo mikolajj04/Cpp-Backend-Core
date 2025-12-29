@@ -6,7 +6,7 @@ A standalone data compression tool based on the **Huffman Coding algorithm**. Th
 - **Prefix-free Encoding:** Automatically generates optimal binary codes based on character frequency.
 - **Symmetric Decoding:** Restores original files using an embedded Huffman code table.
 - **CLI Interface:** Professional command-line handling for automated workflows.
-- **Doxygen Documented:** Fully commented source code with a generated API reference guide.
+- **Doxygen Documented:** Fully commented source code with a generated API reference guide. [View Technical Documentation (PDF)](./latex/refman.pdf)
 
 ### 🛠 Technical Architecture
 | Component | Logic | Technical Detail |
