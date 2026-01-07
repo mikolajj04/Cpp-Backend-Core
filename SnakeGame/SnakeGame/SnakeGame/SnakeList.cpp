@@ -43,7 +43,9 @@ void SnakeList::pop_back() {
 bool SnakeList::isSnakeAt(int x, int y) {
 	Node* temp = head.get();
 	while (temp) {
-		if (temp->x == x && temp->y == y) return true;
+		if (temp->x == x && temp->y == y) {
+			return true;
+		}
 		temp = temp->next.get();
 	}
 	return false;
