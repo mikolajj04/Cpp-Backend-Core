@@ -37,38 +37,39 @@ int main() {
                 break;
             }
         }
+
+
+        if (dir != STOP) {
+            if (dir == LEFT) {
+                headX--;
+            }
+            else if (dir == RIGHT) {
+                headX++;
+            }
+            else if (dir == UP) {
+                headY--;
+            }
+            else if (dir == DOWN) {
+                headY++;
+            }
+            snake.push_front(headX, headY);
+
+            if (headX == fruitX && headY == fruitY) {
+                score += 10;
+                fruitX = rand() % cfg.width;
+                fruitY = rand() % cfg.height;
+            }
+            else {
+                snake.pop_back();
+            }
+
+
+
+
+        }
+
+
     }
-
-    if (dir != STOP) {
-        if (dir == LEFT) {
-            headX--;
-        }
-        else if (dir == RIGHT) {
-            headX++;
-        } else if (dir == UP) {
-            headY--;
-        }
-        else if (dir == DOWN) {
-            headY++;
-        }
-        snake.push_front(headX, headY);
-
-        if (headX == fruitX && headY == fruitY) {
-            score += 10;
-            fruitX = rand() % cfg.width;
-            fruitY = rand() % cfg.height;
-        }
-        else {
-            snake.pop_back();
-        }
-
-
-
-
-    }
-
-
-
 
     return 0;
 }
