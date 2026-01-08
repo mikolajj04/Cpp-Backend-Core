@@ -53,6 +53,17 @@ int main() {
         }
         snake.push_front(headX, headY);
 
+        if (headX == fruitX && headY == fruitY) {
+            score += 10;
+            fruitX = rand() % cfg.width;
+            fruitY = rand() % cfg.height;
+        }
+        else {
+            snake.pop_back();
+        }
+
+
+
 
     }
 
