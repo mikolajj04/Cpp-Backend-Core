@@ -39,5 +39,25 @@ int main() {
         }
     }
 
+    if (dir != STOP) {
+        if (dir == LEFT) {
+            headX--;
+        }
+        else if (dir == RIGHT) {
+            headX++;
+        } else if (dir == UP) {
+            headY--;
+        }
+        else if (dir == DOWN) {
+            headY++;
+        }
+        snake.push_front(headX, headY);
+
+
+    }
+
+
+
+
     return 0;
 }
