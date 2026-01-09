@@ -58,6 +58,7 @@ int main() {
                 score += 10;
                 fruitX = rand() % cfg.width;
                 fruitY = rand() % cfg.height;
+                Beep(750, 50); 
             }
             else {
                 snake.pop_back();
