@@ -63,13 +63,13 @@ int main() {
                 snake.pop_back();
             }
 
-
-
-
         }
-
-
     }
+    Draw(cfg, snake, fruitX, fruitY, score);
+    if (headX<0||headX >= cfg.width || headY < 0|| headY >=cfg.height) {
 
+        gameOver = true;
+    }
+    std::cout << "GAME OVER! Your Score: " << score << std::endl;
     return 0;
 }
