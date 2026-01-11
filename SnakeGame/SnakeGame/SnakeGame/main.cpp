@@ -52,10 +52,11 @@ int main() {
             else if (dir == DOWN) {
                 headY++;
             }
-            snake.push_front(headX, headY);
             if (snake.isSnakeAt(headX, headY)) {
                 gameOver = true;
             }
+            snake.push_front(headX, headY);
+          
 
             if (headX == fruitX && headY == fruitY) {
                 score += 10;
