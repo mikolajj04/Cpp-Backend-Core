@@ -1,11 +1,15 @@
 #include "Draw.h"
 
 void Draw(const GameConfig& cfg, SnakeList& snake, int fruitX, int fruitY, int score) {
+
     COORD cursorPosition;
     cursorPosition.X = 0;
     cursorPosition.Y = 0;
+   
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorPosition);
     //upper wall
+    for (int i = 0; i < (cfg.width/2)-8; i++) { std::cout << " "; }
+    std::cout << "---SNAKE GAME---\n";
     for (int i = 0; i < cfg.width + 2; i++) { std::cout << "#"; }
     std::cout << "\n";
 

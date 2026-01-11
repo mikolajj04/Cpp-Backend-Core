@@ -15,8 +15,9 @@ int main() {
     int fruitY = rand() % cfg.height;
     bool gameOver = false;
     snake.push_front(headX,headY);
-
+   
     while (!gameOver) {
+        
         if (_kbhit()) {
             switch (_getch())
             {
@@ -76,6 +77,7 @@ int main() {
 
         }
         Sleep(cfg.speed);
+        
 
     }
    

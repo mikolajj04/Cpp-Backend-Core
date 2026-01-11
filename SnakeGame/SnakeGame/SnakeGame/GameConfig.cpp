@@ -11,7 +11,6 @@ GameConfig loadConfig(std::string filename){
 
 	file >> config.width >> config.height >> config.speed;
 	file.close();
-	std::cout << "Loaded settings: " << config.width << "x" << config.height << "| Speed: " << config.speed << std::endl;
 	return config;
 
 
