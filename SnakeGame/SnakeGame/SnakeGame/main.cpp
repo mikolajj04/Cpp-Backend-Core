@@ -53,6 +53,9 @@ int main() {
                 headY++;
             }
             snake.push_front(headX, headY);
+            if (snake.isSnakeAt(headX, headY)) {
+                gameOver = true;
+            }
 
             if (headX == fruitX && headY == fruitY) {
                 score += 10;
