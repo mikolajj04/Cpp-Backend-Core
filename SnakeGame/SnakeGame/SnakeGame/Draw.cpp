@@ -41,7 +41,8 @@ void Draw(const GameConfig& cfg, SnakeList& snake, int fruitX, int fruitY, int s
         std::cout << "-";
     }
     std::cout << "\n";
-    std::cout << "Score: " << score << "| map config: " << cfg.width << "x" << cfg.height << "| speed :" << 110-cfg.speed <<"\n";
+    //Final score= Points * speed!
+    std::cout << "Points: " << score << "| map config: " << cfg.width << "x" << cfg.height << "| speed :" << 110-cfg.speed <<"\n";
 
 
 

@@ -93,7 +93,7 @@ int main() {
 
     }
    
-    std::cout << "GAME OVER! Your Score: " << score << std::endl;
+    std::cout << "GAME OVER! Your Final Score: " << score*(110-cfg.speed) << std::endl;
  
     return 0;
 }
