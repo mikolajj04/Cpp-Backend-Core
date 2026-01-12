@@ -7,6 +7,7 @@ struct GameConfig {
 	int width;
 	int height;
 	int speed;
+	bool IsHardcore;
 	
 };
 GameConfig loadConfig(std::string filename);

@@ -9,7 +9,7 @@ GameConfig loadConfig(std::string filename){
 			return { 20,15,100 };
 	}
 
-	file >> config.width >> config.height >> config.speed >> config.
+	file >> config.width >> config.height >> config.speed >> config.IsHardcore;
 	file.close();
 	return config;
 
