@@ -66,7 +66,13 @@ int main() {
                 fruitY = rand() % cfg.height;
                 Beep(750, 50); 
                 if (cfg.IsHardcore == true) {
+                    system("cls");
                     cfg.speed -= 2;
+                    cfg.height -= 1;
+                    cfg.width -= 1;
+                    fruitX = 1 + (rand() % (cfg.width - 2));
+                    fruitY = 1 + (rand() % (cfg.height - 2));
+
                 }
 
             }
