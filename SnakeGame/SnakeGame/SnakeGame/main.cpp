@@ -64,6 +64,8 @@ int main() {
                 fruitX = rand() % cfg.width;
                 fruitY = rand() % cfg.height;
                 Beep(750, 50); 
+                cfg.speed -= 2;
+
             }
             else {
                 snake.pop_back();
@@ -82,5 +84,6 @@ int main() {
     }
    
     std::cout << "GAME OVER! Your Score: " << score << std::endl;
+ 
     return 0;
 }

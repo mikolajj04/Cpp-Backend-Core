@@ -8,7 +8,7 @@ void Draw(const GameConfig& cfg, SnakeList& snake, int fruitX, int fruitY, int s
    
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorPosition);
     //upper wall
-    for (int i = 0; i < (cfg.width/2); i++) { std::cout << " "; }
+    for (int i = 0; i < (cfg.width/2)-8; i++) { std::cout << " "; }
     std::cout << "---SNAKE GAME---\n";
     for (int i = 0; i < cfg.width + 2; i++) { std::cout << "#"; }
     std::cout << "\n";
@@ -41,7 +41,7 @@ void Draw(const GameConfig& cfg, SnakeList& snake, int fruitX, int fruitY, int s
         std::cout << "-";
     }
     std::cout << "\n";
-    std::cout << "Score: " << score << "| map config: " << cfg.width << "x" << cfg.height << "\n";
+    std::cout << "Score: " << score << "| map config: " << cfg.width << "x" << cfg.height << "| speed :" << 110-cfg.speed <<"\n";
 
 
 
