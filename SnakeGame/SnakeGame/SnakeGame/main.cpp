@@ -2,6 +2,7 @@
 #include "GameConfig.h"
 #include "Draw.h"
 
+
 int main() {
     GameConfig cfg = loadConfig("config.txt");
     enum eDirection {STOP= 0, LEFT, RIGHT, UP, DOWN};
@@ -64,7 +65,9 @@ int main() {
                 fruitX = rand() % cfg.width;
                 fruitY = rand() % cfg.height;
                 Beep(750, 50); 
-                cfg.speed -= 2;
+                if (cfg.IsHardcore == true) {
+                    cfg.speed -= 2;
+                }
 
             }
             else {
