@@ -64,7 +64,8 @@ int main() {
                 score += 10;
                 fruitX = rand() % cfg.width;
                 fruitY = rand() % cfg.height;
-                Beep(750, 50); 
+            
+                MessageBeep(MB_ICONWARNING);
                 if (cfg.IsHardcore == true) {
                     system("cls");
                     cfg.speed -= 2;
