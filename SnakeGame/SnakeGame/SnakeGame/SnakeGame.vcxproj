@@ -136,6 +136,7 @@
     <ClInclude Include="Draw.h" />
     <ClInclude Include="GameConfig.h" />
     <ClInclude Include="SnakeList.h" />
+    <ClInclude Include="Types.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="config.txt" />

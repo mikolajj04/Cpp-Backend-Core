@@ -1,12 +1,12 @@
 #include "SnakeList.h"
 #include "GameConfig.h"
 #include "Draw.h"
+#include "Types.h"
 
 
 int main() {
     GameConfig cfg = loadConfig("config.txt");
-    enum eDirection {STOP= 0, LEFT, RIGHT, UP, DOWN};
-    eDirection dir = STOP;
+    eDirection dir = eDirection::STOP;
     SnakeList snake;
 
     int score = 0;
@@ -23,16 +23,16 @@ int main() {
             switch (_getch())
             {
             case 'a':
-                dir = LEFT;
+                dir = eDirection::LEFT;
                 break;
             case 'd':
-                dir = RIGHT;
+                dir = eDirection::RIGHT;
                 break;
             case 'w':
-                dir = UP;
+                dir = eDirection::UP;
                 break;
             case 's':
-                dir = DOWN;
+                dir = eDirection::DOWN;
                 break;
             case 'x':
                 gameOver = true;
@@ -41,17 +41,17 @@ int main() {
         }
 
 
-        if (dir != STOP) {
-            if (dir == LEFT) {
+        if (dir != eDirection::STOP) {
+            if (dir == eDirection::LEFT) {
                 headX--;
             }
-            else if (dir == RIGHT) {
+            else if (dir == eDirection::RIGHT) {
                 headX++;
             }
-            else if (dir == UP) {
+            else if (dir == eDirection::UP) {
                 headY--;
             }
-            else if (dir == DOWN) {
+            else if (dir == eDirection::DOWN) {
                 headY++;
             }
             if (snake.isSnakeAt(headX, headY)) {
