@@ -23,16 +23,16 @@ int main() {
             switch (_getch())
             {
             case 'a':
-                dir = eDirection::LEFT;
+                if(dir!=eDirection::RIGHT) dir = eDirection::LEFT;
                 break;
             case 'd':
-                dir = eDirection::RIGHT;
+                if(dir!=eDirection::LEFT)dir = eDirection::RIGHT;
                 break;
             case 'w':
-                dir = eDirection::UP;
+                if(dir!=eDirection::DOWN)dir = eDirection::UP;
                 break;
             case 's':
-                dir = eDirection::DOWN;
+                if (dir != eDirection::UP) dir = eDirection::DOWN;
                 break;
             case 'x':
                 gameOver = true;
@@ -61,9 +61,7 @@ int main() {
           
 
             if (headX == fruitX && headY == fruitY) {
-            /*    score += 10;
-                fruitX = rand() % cfg.width;
-                fruitY = rand() % cfg.height;*/
+            
             
 
                 switch (cfg.diff) {
@@ -91,15 +89,7 @@ int main() {
 
                 }
                 MessageBeep(MB_ICONWARNING);
-                /*if (cfg.IsHardcore == true) {
-                    system("cls");
-                    cfg.speed -= 2;
-                    cfg.height -= 1;
-                    cfg.width -= 1;
-                    fruitX = 1 + (rand() % (cfg.width - 2));
-                    fruitY = 1 + (rand() % (cfg.height - 2));
-
-                }*/
+               
 
             }
             else {
@@ -117,10 +107,10 @@ int main() {
         
 
     }
-   
+    int finalScore = score * (110 - cfg.speed);
     std::cout << "========================================" << std::endl;
     std::cout << "               GAME OVER!               " << std::endl;
-    std::cout << "          Your Final Score: " << score * (110 - cfg.speed) << std::endl;
+    std::cout << "          Your Final Score: " << finalScore << std::endl;
     std::cout << "========================================" << std::endl;
  
     return 0;
