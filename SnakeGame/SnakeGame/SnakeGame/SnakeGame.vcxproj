@@ -130,11 +130,13 @@
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="GameConfig.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SaveHighScore.cpp" />
     <ClCompile Include="SnakeList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Draw.h" />
     <ClInclude Include="GameConfig.h" />
+    <ClInclude Include="SaveHighScore.h" />
     <ClInclude Include="SnakeList.h" />
     <ClInclude Include="Types.h" />
   </ItemGroup>
