@@ -10,7 +10,7 @@ GameConfig loadConfig(std::string filename){
 			return { 20,15,100,false };
 	}
 
-	file >> config.width >> config.height >> config.speed >> config.IsHardcore >> tempDiff;
+	file >> config.width >> config.height >> config.speed  >> tempDiff;
 	if (config.width > 100 || config.height > 24) {
 		std::cout << "							Error: maximum width is 100 and maximum height is 24 "<< std::endl;
 		std::cout << "							Loading default settings..." << std::endl; 
