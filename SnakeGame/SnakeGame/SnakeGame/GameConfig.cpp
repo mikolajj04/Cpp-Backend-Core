@@ -7,7 +7,7 @@ GameConfig loadConfig(std::string filename){
 	if (!file.is_open()) {
 		std::cout << "Error: cannot open the file: " << filename << "!" << std::endl;
 		std::cout << "Loading default settings..." << std::endl; 
-			return { 20,15,100,false };
+			return { 20,15,100,Difficulty::EASY };
 	}
 
 	file >> config.width >> config.height >> config.speed  >> tempDiff;
@@ -15,7 +15,7 @@ GameConfig loadConfig(std::string filename){
 		std::cout << "							Error: maximum width is 100 and maximum height is 24 "<< std::endl;
 		std::cout << "							Loading default settings..." << std::endl; 
 		
-			return { 20,15,100,false };
+			return { 20,15,100,Difficulty::EASY };
 	}
 	if (tempDiff == "HARD") {
 		config.diff = Difficulty::HARD;
