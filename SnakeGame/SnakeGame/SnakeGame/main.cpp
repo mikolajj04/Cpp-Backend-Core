@@ -112,6 +112,7 @@ int main() {
     std::cout << "               GAME OVER!               " << std::endl;
     std::cout << "          Your Final Score: " << finalScore << std::endl;
     std::cout << "========================================" << std::endl;
- 
+    std::cout << "Press any key to exit...";
+    _getch();
     return 0;
 }
