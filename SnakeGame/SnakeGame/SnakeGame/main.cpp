@@ -117,7 +117,8 @@ int main() {
     std::cout << "Enter your name: ";
     std::cin >> name;
     saveHighScore(name, finalScore);
-    std::cout << "Press any key to exit...";
+    displayLeaderboard();
+    std::cout << "\nPress any key to exit...";
     _getch();
     return 0;
 }

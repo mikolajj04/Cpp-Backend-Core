@@ -1,3 +1,7 @@
-
-Name: Mike | Score: 300
-Name: Mike | Score: 100
+Michael | Score: 650
+Mikeeel | Score: 650
+Mikolaj | Score: 650
+Agnes | Score: 650
+Olaf | Score: 2850
+wd | Score: 0
+dw | Score: 650
