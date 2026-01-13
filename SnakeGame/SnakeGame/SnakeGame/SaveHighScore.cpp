@@ -17,7 +17,7 @@ void displayLeaderboard(){
 	std::ifstream inFile("highscores.txt");
 	std::string line;
 	system("cls");
-	std::cout << "==== TOP SCORES ====\n" << std::endl;
+	std::cout << "=== RECENT SCORES ===\n" << std::endl;
 	if (inFile.is_open()) {
 		while (getline(inFile, line)) {
 			std::cout << line << std::endl;
@@ -26,6 +26,6 @@ void displayLeaderboard(){
 	}else {
 		std::cout << "No scores yet. Be the first!" << std::endl;
 	}
-	std::cout << "\n====================" << std::endl;
+	std::cout << "\n=====================" << std::endl;
 
 }
