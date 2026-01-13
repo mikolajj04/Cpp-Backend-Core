@@ -2,6 +2,7 @@
 #include "GameConfig.h"
 #include "Draw.h"
 #include "Types.h"
+#include "SaveHighScore.h"
 
 
 int main() {
@@ -112,6 +113,10 @@ int main() {
     std::cout << "               GAME OVER!               " << std::endl;
     std::cout << "          Your Final Score: " << finalScore << std::endl;
     std::cout << "========================================" << std::endl;
+    std::string name;
+    std::cout << "Enter your name: ";
+    std::cin >> name;
+    saveHighScore(name, finalScore);
     std::cout << "Press any key to exit...";
     _getch();
     return 0;
