@@ -61,12 +61,37 @@ int main() {
           
 
             if (headX == fruitX && headY == fruitY) {
-                score += 10;
+            /*    score += 10;
                 fruitX = rand() % cfg.width;
-                fruitY = rand() % cfg.height;
+                fruitY = rand() % cfg.height;*/
             
+
+                switch (cfg.diff) {
+                case Difficulty::EASY:
+                    score += 10;
+                    fruitX = rand() % cfg.width;
+                    fruitY = rand() % cfg.height;
+                    break;
+                case Difficulty::MEDIUM:
+                    score += 20;
+                    cfg.speed -= 2;
+                    fruitX = rand() % cfg.width;
+                    fruitY = rand() % cfg.height;
+                    break;
+
+                case Difficulty::HARD:
+                    system("cls");
+                    score += 50;
+                    cfg.speed -= 3;
+                    if (cfg.width > 10)cfg.width -= 1;
+                    if(cfg.height>5)cfg.height -= 1;
+                    fruitX = 1 + (rand() % (cfg.width - 2));
+                    fruitY = 1 + (rand() % (cfg.height - 2));
+                    break;
+
+                }
                 MessageBeep(MB_ICONWARNING);
-                if (cfg.IsHardcore == true) {
+                /*if (cfg.IsHardcore == true) {
                     system("cls");
                     cfg.speed -= 2;
                     cfg.height -= 1;
@@ -74,7 +99,7 @@ int main() {
                     fruitX = 1 + (rand() % (cfg.width - 2));
                     fruitY = 1 + (rand() % (cfg.height - 2));
 
-                }
+                }*/
 
             }
             else {

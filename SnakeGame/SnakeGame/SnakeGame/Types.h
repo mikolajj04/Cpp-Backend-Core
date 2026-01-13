@@ -7,4 +7,8 @@ enum class eDirection {
 	DOWN 
 };
 
-
+enum class Difficulty {
+	EASY,
+	MEDIUM,
+	HARD
+};
