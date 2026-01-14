@@ -24,14 +24,13 @@ The project includes comprehensive technical documentation generated via **Doxyg
 
 ## 🖥️ How to Build and Run
 
-![Snake Game UI](./docs/SnakeGameUI.png)
 1.  **Requirements**: A C++17 compliant compiler (e.g., MSVC, GCC).
 2.  **Compilation**: Open the project in your preferred IDE (Visual Studio recommended) and build the solution.
 3.  **Config**: Ensure `config.txt` is located in the executable's directory.
 4.  **Controls**: 
     * `W`, `A`, `S`, `D` – Movement
     * `X` – Quit game
-
+![Snake Game UI](./docs/SnakeGameUI.png)
 ## 🎓 Academic Requirements Compliance
 This project fulfills all laboratory requirements, including:
 *  Custom implementation of a dynamic data structure.
