@@ -18,8 +18,9 @@ This is a modern take on the classic Snake game, developed as a technical projec
 * `Draw`: flicker-free rendering system using Windows Console API.
 
 ## 📖 Documentation
-The project includes comprehensive technical documentation generated via **Doxygen**. 
-| [SnakeGame](https://github.com/mikolajj04/Cpp-Backend-Core/tree/main/SnakeGame)
+The project includes comprehensive technical documentation generated via **Doxygen**.
+
+| [Documentation](https://mikolajj04.github.io/Cpp-Backend-Core/index.html)
 
 ## 🖥️ How to Build and Run
 1.  **Requirements**: A C++17 compliant compiler (e.g., MSVC, GCC).
