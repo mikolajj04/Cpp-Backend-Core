@@ -68,3 +68,31 @@ SnakeList::SnakeList(SnakeList&& other) noexcept : head(std::move(other.head)), 
 	other.tail = nullptr;
 }
 
+//Copy operator
+SnakeList& SnakeList::operator=(const SnakeList& other) {
+	if (this != &other) {
+		head.reset();
+		tail = nullptr;
+
+
+		if (other.tail) {
+			Node* temp = other.tail;
+			while (temp) {
+				this->push_front(temp->x, temp->y);
+				temp = temp->prev;
+			}
+		}
+	}
+	return *this;
+}
+
+//Move operator
+SnakeList& SnakeList::operator=(SnakeList&& other) noexcept {
+	if (this != &other) {
+		head.reset();
+		head = std::move(other.head);
+		tail = other.tail;
+		other.tail = nullptr;
+	}
+	return *this;
+}

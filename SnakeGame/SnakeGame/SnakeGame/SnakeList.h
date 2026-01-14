@@ -14,7 +14,7 @@ struct Node {
 class SnakeList {
 	std::unique_ptr<Node> head;
 	Node* tail;
-public:
+	public:
 	SnakeList();
 
 	void push_front(int x, int y);
@@ -26,6 +26,9 @@ public:
 
 	SnakeList(const SnakeList& other);
 	SnakeList(SnakeList&& other) noexcept;
+	SnakeList& operator=(const SnakeList& other);
+	SnakeList& operator=(SnakeList&& other) noexcept;
+	
 };
 
 
