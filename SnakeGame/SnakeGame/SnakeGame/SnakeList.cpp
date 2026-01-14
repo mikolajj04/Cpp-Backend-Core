@@ -16,6 +16,8 @@ void SnakeList::push_front(int x, int y) {
 	}
 
 }
+
+//Debug method
 void SnakeList:: printList() {
 	Node* temp = head.get();
 	std::cout << "Snake (head->tail): " << std::endl;
@@ -50,3 +52,19 @@ bool SnakeList::isSnakeAt(int x, int y) {
 	}
 	return false;
 }
+
+//Deep copy
+SnakeList::SnakeList(const SnakeList& other) : head(nullptr), tail(nullptr) {
+	if (!other.tail) return;
+	Node* temp = other.tail;
+	while (temp) {
+		this->push_front(temp->x, temp->y);
+		temp = temp->prev;
+	}
+}
+
+//Move Constructor
+SnakeList::SnakeList(SnakeList&& other) noexcept : head(std::move(other.head)), tail(other.tail) {
+	other.tail = nullptr;
+}
+

@@ -23,5 +23,10 @@ public:
 	
 	void pop_back();
 	bool isSnakeAt(int x, int y);
+
+	SnakeList(const SnakeList& other);
+	SnakeList(SnakeList&& other) noexcept;
 };
+
+
 
