@@ -96,3 +96,22 @@ SnakeList& SnakeList::operator=(SnakeList&& other) noexcept {
 	}
 	return *this;
 }
+//sort method
+void SnakeList::sortContent() {
+    if (!head || !head->next) return;
+
+    bool swapped;
+    do {
+        swapped = false;
+        Node* curr = head.get();
+
+        while (curr->next) {
+            if (curr->x > curr->next->x) {          
+                std::swap(curr->x, curr->next->x);
+                std::swap(curr->y, curr->next->y);
+                swapped = true;
+            }
+            curr = curr->next.get();
+        }
+    } while (swapped);
+}

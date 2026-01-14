@@ -28,7 +28,7 @@ class SnakeList {
 	SnakeList(SnakeList&& other) noexcept;
 	SnakeList& operator=(const SnakeList& other);
 	SnakeList& operator=(SnakeList&& other) noexcept;
-	
+	void sortContent();
 };
 
 
