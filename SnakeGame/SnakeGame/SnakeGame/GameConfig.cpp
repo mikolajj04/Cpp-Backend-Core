@@ -1,3 +1,9 @@
+/**
+ * @file GameConfig.cpp
+ * @brief Implementation of configuration loading.
+ * * Handles reading game parameters from external files and provides
+ * fallback default values in case of errors.
+ */
 #include "GameConfig.h"
 #include <conio.h>
 GameConfig loadConfig(std::string filename){

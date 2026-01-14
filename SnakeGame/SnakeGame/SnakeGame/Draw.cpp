@@ -1,3 +1,9 @@
+/**
+ * @file Draw.cpp
+ * @brief Implementation of the rendering engine.
+ * * Uses Windows console API to position the cursor and draw the game board,
+ * snake segments, and fruits without flickering.
+ */
 #include "Draw.h"
 
 void Draw(const GameConfig& cfg, SnakeList& snake, int fruitX, int fruitY, int score) {

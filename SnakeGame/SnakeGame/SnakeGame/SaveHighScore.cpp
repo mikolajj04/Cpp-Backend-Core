@@ -1,3 +1,9 @@
+/**
+ * @file SaveHighScore.cpp
+ * @brief Implementation of the high score system.
+ * * Manages permanent storage of player results in a text file
+ * and handles leaderboard display.
+ */
 #pragma once
 #include "SaveHighScore.h"
 #include <iostream>

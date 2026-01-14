@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief The main entry point for the Snake game.
+ * * Coordinates the game loop, input handling, movement logic,
+ * collision detection, and difficulty scaling.
+ */
 #include "SnakeList.h"
 #include "GameConfig.h"
 #include "Draw.h"
