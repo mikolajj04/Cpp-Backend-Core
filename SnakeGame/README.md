@@ -30,6 +30,8 @@ The project includes comprehensive technical documentation generated via **Doxyg
 4.  **Controls**: 
     * `W`, `A`, `S`, `D` – Movement
     * `X` – Quit game
+  
+      
 ![Snake Game UI](./docs/SnakeGameUI.png)
 ## 🎓 Academic Requirements Compliance
 This project fulfills all laboratory requirements, including:
