@@ -19,10 +19,7 @@ This is a modern take on the classic Snake game, developed as a technical projec
 
 ## 📖 Documentation
 The project includes comprehensive technical documentation generated via **Doxygen**. 
-To view it:
-1. Navigate to the `html/` directory.
-2. Open `index.html` in your web browser.
-3. Explore class diagrams, call graphs, and detailed API descriptions.
+| [SnakeGame](https://github.com/mikolajj04/Cpp-Backend-Core/tree/main/SnakeGame)
 
 ## 🖥️ How to Build and Run
 1.  **Requirements**: A C++17 compliant compiler (e.g., MSVC, GCC).
