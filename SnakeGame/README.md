@@ -33,6 +33,7 @@ The project includes comprehensive technical documentation generated via **Doxyg
   
       
 ![Snake Game UI](./docs/SnakeGameUI.png)
+
 ## 🎓 Academic Requirements Compliance
 This project fulfills all laboratory requirements, including:
 *  Custom implementation of a dynamic data structure.
