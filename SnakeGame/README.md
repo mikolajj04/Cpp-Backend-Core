@@ -20,7 +20,7 @@ This is a modern take on the classic Snake game, developed as a technical projec
 ## 📖 Documentation
 The project includes comprehensive technical documentation generated via **Doxygen**.
 
-➡[Documentation](./docs/refman.pdf)
+➡See [Documentation](./docs/refman.pdf)
 
 ## 🖥️ How to Build and Run
 
