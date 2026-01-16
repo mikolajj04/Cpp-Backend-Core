@@ -14,7 +14,7 @@ This is a modern take on the classic Snake game, developed as a technical projec
 ## 🛠 Project Structure
 * `SnakeList`: Core data structure managing the snake's body segments.
 * `GameConfig`: Handles external configuration loading (`config.txt`).
-* `SaveHighScore`: Manages player records and leaderboard display.
+* `SaveHighScore`: Manages player records and leaderboard display (`highscore.txt`).
 * `Draw`: flicker-free rendering system using Windows Console API.
 
 ## 📖 Documentation
