@@ -31,6 +31,13 @@ The project includes comprehensive technical documentation generated via **Doxyg
     * `W`, `A`, `S`, `D` – Movement
     * `X` – Quit game
   
+## 🕹️ Dynamic Difficulty Scaling
+The game implements a sophisticated difficulty system that goes beyond simple speed increases, affecting both the environment and scoring mechanics:
+
+* **EASY**: Standard snake experience. snake grows after eating fruit with constant speed and map size.
+* **MEDIUM**: Increased challenge – each fruit consumed increases the snake's speed.
+* **HARD**: Extreme mode – higher speed acceleration combined with dynamic map shrinking, reducing the playable area after every consumed fruit.
+  
       
 ![Snake Game UI](./docs/SnakeGameUI.png)
 
