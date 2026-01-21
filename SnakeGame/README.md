@@ -32,6 +32,7 @@ The project includes comprehensive technical documentation generated via **Doxyg
     * `X` – Quit game
 
 
+
 ![Snake Game UI](./docs/SnakeGameUI.png)
   
 ## 🕹️ Dynamic Difficulty Scaling
