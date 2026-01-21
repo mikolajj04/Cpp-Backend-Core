@@ -30,6 +30,9 @@ The project includes comprehensive technical documentation generated via **Doxyg
 4.  **Controls**: 
     * `W`, `A`, `S`, `D` – Movement
     * `X` – Quit game
+
+
+![Snake Game UI](./docs/SnakeGameUI.png)
   
 ## 🕹️ Dynamic Difficulty Scaling
 The game implements a sophisticated difficulty system that goes beyond simple speed increases, affecting both the environment and scoring mechanics:
@@ -38,8 +41,6 @@ The game implements a sophisticated difficulty system that goes beyond simple sp
 * **MEDIUM**: Increased challenge – each fruit consumed increases the snake's speed.
 * **HARD**: Extreme mode – higher speed acceleration combined with dynamic map shrinking, reducing the playable area after every consumed fruit.
   
-      
-![Snake Game UI](./docs/SnakeGameUI.png)
 
 ## 🎓 Academic Requirements Compliance
 This project fulfills all laboratory requirements, including:
