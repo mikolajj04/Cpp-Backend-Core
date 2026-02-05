@@ -95,8 +95,9 @@ int main() {
                     break;
 
                 }
-                MessageBeep(MB_ICONWARNING);
-               
+                
+                MessageBeep(MB_ICONWARNING);             
+                
 
             }
             else {
@@ -114,6 +115,9 @@ int main() {
         
 
     }
+    
+    MessageBeep(MB_ICONHAND);
+    Sleep(500);
     int finalScore = score * (110 - cfg.speed);
     std::cout << "========================================" << std::endl;
     std::cout << "               GAME OVER!               " << std::endl;
