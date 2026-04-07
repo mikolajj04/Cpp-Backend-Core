@@ -22,7 +22,7 @@ The project includes comprehensive technical documentation generated via **Doxyg
 
 ➡See [Documentation](./docs/refman.pdf)
 
-## How to Build and Run
+##  How to Build and Run
 
 1.  **Requirements**: A C++17 compliant compiler (e.g., MSVC, GCC).
 2.  **Compilation**: Open the project in your preferred IDE (Visual Studio recommended) and build the solution.
@@ -43,7 +43,7 @@ The game implements a sophisticated difficulty system that goes beyond simple sp
 * **HARD**: Extreme mode – higher speed acceleration combined with dynamic map shrinking, reducing the playable area after every consumed fruit.
   
 
-## Academic Requirements Compliance
+##  Academic Requirements Compliance
 This project fulfills all laboratory requirements, including:
 *  Custom implementation of a dynamic data structure.
 *  Implementation of Move Semantics.
