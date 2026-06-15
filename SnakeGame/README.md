@@ -34,6 +34,8 @@ The project includes comprehensive technical documentation generated via **Doxyg
 
 <div align="center">
   <img src="./docs/SnakeShowcase.gif" alt="Opis gifa" />
+    <br>
+  <em>Game Showcase</em>
 </div>
   
 ## 🕹️ Dynamic Difficulty Scaling
