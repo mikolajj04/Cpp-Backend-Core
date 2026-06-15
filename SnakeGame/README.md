@@ -33,7 +33,7 @@ The project includes comprehensive technical documentation generated via **Doxyg
 
 
 
-![Gameplay Demo](SnakeShowcase.gif)
+![Gameplay Demo](./docs/SnakeShowcase.gif)
   
 ## 🕹️ Dynamic Difficulty Scaling
 The game implements a sophisticated difficulty system that goes beyond simple speed increases, affecting both the environment and scoring mechanics:
