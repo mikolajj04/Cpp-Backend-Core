@@ -32,7 +32,7 @@ The project includes comprehensive technical documentation generated via **Doxyg
     * `X` – Quit game
 
 
-<div align="center">
+<div align="left">
   <img src="./docs/SnakeShowcase.gif" alt="Opis gifa" />
     <br>
   <em>Game Showcase</em>
